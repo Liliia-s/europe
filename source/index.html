@@ -13,19 +13,31 @@
 </head>
 
 <body>
-  <header class="site-header">
+  <header class="site-header container">
     <a class="site-header__logo">
       <img class="site-header__logo-image" src="img/logo.svg" alt="Логотип тур-фирмы Way">
     </a>
     <nav class="site-header__nav">
       <ul class="site-header__nav-list">
-        <li class="site-header__nav-item">О путешествии</li>
-        <li class="site-header__nav-item">Цены</li>
+        <li class="site-header__nav-item"><a href="" class="site-header__nav-link">О путешествии</a></li>
+        <li class="site-header__nav-item"><a href="" class="site-header__nav-link">Цены</a></li>
       </ul>
-      <a class="site-header__nav-link" href="tel:749978468446">+7 (499)-784-684-46</a>
+    </nav>
+    <div class="site-header__wrapper-tel">
+      <svg class="site-header__nav-icon" width="30" height="30">
+        <use xlink:href="img/sprite.svg#icon-phone"></use>
+      </svg>
+      <a class="site-header__nav-tel" href="tel:749978468446">+7 (499) -784-684-46</a>
+    </div>
   </header>
   <main class="site-main">
-
+    <section class="site-main__promo promo">
+      <div class="site-main__promo-wrapper">
+        <h1 class="promo__title">Путешествие по Европе</h1>
+        <p class="promo__description">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
+        <a href="" class="promo__button button">Смотреть тур</a>
+      </div>
+    </section>
   </main>
   <foooter class="site-footer"></foooter>
 </body>

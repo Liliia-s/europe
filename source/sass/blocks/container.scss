@@ -1,14 +1,14 @@
 .container {
   margin: 0 auto;
   padding: 0 25px;
-  max-width: $desktop-width;
+  // max-width: $desktop-width;
   width: 100%;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
     padding: 0 40px;
   }
 
-  @media (min-width: $mobile-width) {
-    padding: 0 60px;
+  @media (min-width: $desktop-width) {
+    padding: 0 375px;
   }
 }

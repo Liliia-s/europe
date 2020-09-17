@@ -1,0 +1,16 @@
+.site-main__promo {
+  padding-top: 184px;
+  padding-bottom: 295px;
+  background: url("../../img/greece-background-desktop@1x.jpg") no-repeat #92b3dc;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../../img/greece-background-desktop@2x.jpg");
+  }
+}
+
+.site-main__promo-wrapper {
+  max-width: 412px;
+  margin-right: 433px;
+  margin-left: auto;
+}
+

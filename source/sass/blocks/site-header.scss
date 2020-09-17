@@ -1,3 +1,54 @@
 .site-header {
-  font-size: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 37px;
+  padding-bottom: 30px;
+}
+
+.site-header__logo {
+  margin-right: auto;
+}
+
+.site-header__nav {
+  padding-top: 6px;
+  margin-right: 56px;
+}
+
+.site-header__nav-list {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+}
+
+.site-header__nav-item:not(:last-child) {
+  padding-right: 41px;
+}
+
+.site-header__nav-link {
+  color: $color-black-blue;
+
+  &:hover {
+    color: $color-coral;
+  }
+}
+
+.site-header__wrapper-tel {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.site-header__nav-icon {
+  margin-right: 8px;
+  fill: none;
+}
+
+.site-header__nav-tel {
+  padding-right: 15px;
+  font-size: 18px;
+  line-height: 32px;
+  color: $color-coral;
+  text-decoration: underline;
 }

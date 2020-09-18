@@ -6,13 +6,14 @@
 //   opacity: 0.2;
 // }
 
-// @media (min-width: $tablet-width) {
-//   body {
-//     background: url("../img/pixel-perfect-tablet-yellow.jpg") no-repeat;
-//     min-height: 4977px;
-//     opacity: 0.2;
-//   }
-// }
+@media (min-width: $tablet-width) {
+  body {
+    background: url("../img/pixel-perfect-tablet-blue.jpg") no-repeat;
+    // background: url("../img/pixel-perfect-tablet-yellow.jpg") no-repeat;
+    min-height: 4977px;
+    opacity: 0.2;
+  }
+}
 
 @media (min-width: $desktop-width) {
   body {

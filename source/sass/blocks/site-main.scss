@@ -1,4 +1,8 @@
 .site-main__promo {
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    padding-top: 60px;
+  }
+
   padding-top: 184px;
   padding-bottom: 295px;
   background: url("../../img/greece-background-desktop@1x.jpg") no-repeat #92b3dc;
@@ -8,7 +12,18 @@
   }
 }
 
-.site-main__promo-wrapper {
+.site-main__wrapper-promo {
+  // @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+  // }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    align-items: center;
+    max-width: 55%;
+    margin: 0 auto;
+  }
+
+  display: flex;
+  flex-direction: column;
   max-width: 412px;
   margin-right: 433px;
   margin-left: auto;

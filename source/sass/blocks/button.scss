@@ -1,5 +1,16 @@
 .button {
-  display: block;
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    width: 250px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 500;
+  }
+
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: baseline;
   padding: 30px 40px;
   width: 340px;
   font-size: 12px;
@@ -7,6 +18,27 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: $color-white;
   background-color: $color-coral;
+}
+
+// .promo__wrapper-button {
+//   position: relative;
+// }
+
+
+.button__link {
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    padding-right: 170px;
+  }
+
+  position: relative;
+  color: $color-white;
+  padding-right: 135px;
+}
+
+.button__icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  fill: none;
 }

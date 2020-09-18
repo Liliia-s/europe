@@ -1,20 +1,71 @@
 .site-header {
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    flex-direction: column;
+    padding: 0;
+  }
+
   display: flex;
   flex-wrap: wrap;
   padding-top: 37px;
   padding-bottom: 30px;
 }
 
-.site-header__logo {
+.site-header__wrapper-menu {
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    display: flex;
+    padding-bottom: 82px;
+    margin: 0;
+    justify-content: space-between;
+  }
+
   margin-right: auto;
 }
 
+.site-header__logo {
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    padding-top: 18px;
+    padding-left: 20px;
+  }
+}
+
+.site-header__logo-icon {
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    width: 44px;
+    height: 17px;
+  }
+}
+
+.site-header__button-menu {
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    display: flex;
+    padding: 10px 21px;
+    width: 72px;
+    height: 50px;
+    background-color: $color-coral;
+    border: 0;
+  }
+
+  display: none;
+}
+
 .site-header__nav {
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    @include reset-indent;
+    padding-bottom: 280px;
+  }
+
   padding-top: 6px;
   margin-right: 56px;
 }
 
 .site-header__nav-list {
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+  }
+
   @include reset-list;
   display: flex;
   flex-wrap: wrap;
@@ -23,7 +74,21 @@
   line-height: 17px;
 }
 
+.site-header__nav-item {
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    display: flex;
+    justify-content: space-between;
+    padding: 17px 16px;
+    background-color: $color-gray;
+  }
+}
+
 .site-header__nav-item:not(:last-child) {
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    padding-right: 16px;
+    margin-bottom: 30px;
+  }
+
   padding-right: 41px;
 }
 
@@ -35,12 +100,24 @@
   }
 }
 
+.site-header__icon-arrow {
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    display: block;
+  }
+
+  display: none;
+}
+
 .site-header__wrapper-tel {
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    display: none;
+  }
+
   display: flex;
   flex-wrap: nowrap;
 }
 
-.site-header__nav-icon {
+.site-header__icon-tel {
   margin-right: 8px;
   fill: none;
 }

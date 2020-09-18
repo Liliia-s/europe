@@ -1,4 +1,10 @@
 .site-main__promo {
+  @media (max-width: $mobile-max-width) {
+    padding-top: 0;
+    padding-bottom: 100px;
+    background: none;
+  }
+
   @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
     padding-top: 60px;
     padding-bottom: 83px;
@@ -14,12 +20,14 @@
 }
 
 .site-main__wrapper-promo {
-  // @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
-  // }
+  @media (max-width: $tablet-max-width) {
+    max-width: 100%;
+    margin: 0;
+  }
 
   @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
     align-items: center;
-    max-width: 65%;
+    max-width: 57%;
     margin: 0 auto;
   }
 
@@ -30,3 +38,18 @@
   margin-left: auto;
 }
 
+.site-main__wrapper-title {
+  @media (max-width: $mobile-max-width) {
+    padding: 0 16px;
+    padding-top: 82px;
+    padding-bottom: 52px;
+    margin-bottom: 20px;
+    background: url("../../img/greece-background-mobile@1x.jpg") no-repeat #92b3dc;
+  }
+}
+
+.site-main__wrapper-description {
+  @media (max-width: $mobile-max-width) {
+    padding: 0 16px;
+  }
+}

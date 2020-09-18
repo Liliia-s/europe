@@ -1,0 +1,34 @@
+.places__title {
+  @include reset-indent;
+  font-size: 55px;
+  line-height: 80px;
+  font-weight: 600;
+  letter-spacing: -1.3px;
+  color: $color-granite;
+
+  @media (max-width: $tablet-max-width) {
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 0;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    font-size: 30px;
+    line-height: 45px;
+  }
+}
+
+.places__description {
+  @include reset-indent;
+  letter-spacing: -0.47px;
+  color: rgba($color-granite, 0.7);
+
+  @media (max-width: $tablet-max-width) {
+    text-align: center;
+  }
+}
+
+.places__list {
+  @include reset-list;
+}

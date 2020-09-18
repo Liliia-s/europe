@@ -1,95 +1,112 @@
 .site-header {
-  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-    flex-direction: column;
-    padding: 0;
-  }
-
   display: flex;
   flex-wrap: wrap;
   padding-top: 37px;
   padding-bottom: 30px;
+
+  @media (max-width: $tablet-max-width) {
+    flex-direction: column;
+    padding: 0;
+  }
 }
 
 .site-header__wrapper-menu {
-  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+  margin-right: auto;
+
+  @media (max-width: $tablet-max-width) {
     display: flex;
-    padding-bottom: 82px;
-    margin: 0;
     justify-content: space-between;
+    margin: 0;
+    padding-bottom: 86px;
   }
 
-  margin-right: auto;
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    padding-bottom: 82px;
+  }
 }
 
 .site-header__logo {
+  @media (max-width: $tablet-max-width) {
+    padding-top: 16px;
+    padding-left: 16px;
+  }
+
   @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-    padding-top: 18px;
     padding-left: 20px;
   }
 }
 
-.site-header__logo-icon {
-  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-    width: 44px;
-    height: 17px;
-  }
-}
-
 .site-header__button-menu {
-  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+  display: none;
+
+  @media (max-width: $tablet-max-width) {
     display: flex;
-    padding: 10px 21px;
-    width: 72px;
+    width: 50px;
     height: 50px;
     background-color: $color-coral;
     border: 0;
   }
 
-  display: none;
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    padding: 10px 21px;
+    width: 72px;
+    height: 50px;
+  }
 }
 
 .site-header__nav {
-  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-    @include reset-indent;
-    padding-bottom: 280px;
-  }
-
   padding-top: 6px;
   margin-right: 56px;
+
+  @media (max-width: $tablet-max-width) {
+    @include reset-indent;
+    padding-bottom: 288px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    padding-bottom: 280px;
+  }
 }
 
 .site-header__nav-list {
-  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-    flex-direction: column;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 140%;
-  }
-
   @include reset-list;
   display: flex;
   flex-wrap: wrap;
   font-size: 14px;
   font-weight: 500;
   line-height: 17px;
+
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+  }
 }
 
 .site-header__nav-item {
-  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-    display: flex;
-    justify-content: space-between;
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
     padding: 17px 16px;
     background-color: $color-gray;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    padding-top: 14px;
+    padding-bottom: 14px;
   }
 }
 
 .site-header__nav-item:not(:last-child) {
+  padding-right: 41px;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    margin-bottom: 32px;
+  }
+
   @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
     padding-right: 16px;
     margin-bottom: 30px;
   }
-
-  padding-right: 41px;
 }
 
 .site-header__nav-link {
@@ -101,20 +118,20 @@
 }
 
 .site-header__icon-arrow {
+  display: none;
+
   @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
     display: block;
   }
-
-  display: none;
 }
 
 .site-header__wrapper-tel {
-  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-    display: none;
-  }
-
   display: flex;
   flex-wrap: nowrap;
+
+  @media (max-width: $tablet-max-width) {
+    display: none;
+  }
 }
 
 .site-header__icon-tel {

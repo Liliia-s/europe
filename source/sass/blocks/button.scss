@@ -1,15 +1,4 @@
 .button {
-  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-    width: 250px;
-    padding-top: 19px;
-    padding-right: 20px;
-    padding-bottom: 19px;
-    padding-left: 40px;
-    font-size: 10px;
-    line-height: 12px;
-    font-weight: 500;
-  }
-
   padding: 30px 40px;
   width: 340px;
   font-size: 12px;
@@ -18,6 +7,26 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   background-color: $color-coral;
+
+  @media (max-width: $mobile-max-width) {
+    width: 100%;
+    padding: 0;
+  }
+
+  @media (max-width: $tablet-max-width) {
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 500;
+    padding-top: 19px;
+    padding-right: 20px;
+    padding-bottom: 19px;
+    padding-left: 40px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    margin: 0 auto;
+    width: 250px;
+  }
 }
 
 // .promo__wrapper-button {
@@ -26,13 +35,17 @@
 
 
 .button__link {
-  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-    padding-right: 65px;
-  }
-
   position: relative;
   color: $color-white;
   padding-right: 135px;
+
+  @media (max-width: $mobile-max-width) {
+    padding-right: 103px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    padding-right: 65px;
+  }
 }
 
 .button__icon {

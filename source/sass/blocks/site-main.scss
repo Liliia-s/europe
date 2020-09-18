@@ -1,6 +1,7 @@
 .site-main__promo {
   @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
     padding-top: 60px;
+    padding-bottom: 83px;
   }
 
   padding-top: 184px;
@@ -18,7 +19,7 @@
 
   @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
     align-items: center;
-    max-width: 55%;
+    max-width: 65%;
     margin: 0 auto;
   }
 

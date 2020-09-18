@@ -2,15 +2,14 @@
   @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
     width: 250px;
     padding-top: 19px;
+    padding-right: 20px;
     padding-bottom: 19px;
+    padding-left: 40px;
     font-size: 10px;
     line-height: 12px;
     font-weight: 500;
   }
 
-  // display: flex;
-  // justify-content: space-between;
-  // align-items: baseline;
   padding: 30px 40px;
   width: 340px;
   font-size: 12px;
@@ -28,7 +27,7 @@
 
 .button__link {
   @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-    padding-right: 170px;
+    padding-right: 65px;
   }
 
   position: relative;

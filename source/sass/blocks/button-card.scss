@@ -1,0 +1,14 @@
+.button-card {
+  align-self: center;
+  width: 90%;
+  padding: 30px 25px;
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: $color-white;
+  border: 1px solid rgba($color-white, 0.7);
+}

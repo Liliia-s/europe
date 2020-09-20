@@ -12,6 +12,17 @@
   width: 382px;
   padding: 30px;
   background-color: $color-white;
+
+  @media (max-width: $mobile-max-width) {
+    width: 268px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media ($tablet-width) and (max-width: $tablet-max-width) {
+    width: 382px;
+  }
 }
 
 .reviews__title {
@@ -29,9 +40,15 @@
     left: 0;
     width: 68px;
     border: 1px solid $color-coral;
+
+    @media (max-width: $mobile-max-width) {
+      bottom: 19px;
+      right: 0;
+      margin: 0 auto;
+    }
   }
 
-  @media (max-width: mobile-max-width) {
+  @media (max-width: $mobile-max-width) {
     padding-bottom: 31px;
     font-size: 20px;
     line-height: 24px;
@@ -45,14 +62,15 @@
   letter-spacing: -0.408px;
   color: rgba($color-granite, 0.7);
 
-  @media (max-width: mobile-max-width) {
-    padding-bottom: 20px;
+  @media (max-width: $mobile-max-width) {
+    padding-bottom: 17px;
     text-align: center;
   }
 }
 
 .reviews__user-name {
   position: relative;
+  display: block;
   padding-left: 54px;
   font-family: "Poppins", "Arial", sans-serif;
   font-weight: 500;
@@ -60,7 +78,10 @@
   line-height: 24px;
   // letter-spacing: -0.46px;
 
-  @media (max-width: mobile-max-width) {
+  @media (max-width: $mobile-max-width) {
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-left: 0;
     text-align: center;
   }
 
@@ -73,6 +94,11 @@
     left: 0;
     width: 38px;
     height: 38px;
+
+    @media (max-width: $mobile-max-width) {
+      right: 0;
+      margin: 0 auto;
+    }
   }
 
   &--greece::before {

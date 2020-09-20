@@ -47,6 +47,7 @@
 .countries__description-item {
   position: relative;
   display: flex;
+  // margin: 0 375px;
   flex-wrap: nowrap;
   justify-content: space-between;
 
@@ -58,7 +59,7 @@
     content: "";
     position: absolute;
     top: -10px;
-    right: 270px;
+    right: 645px;
     width: 430px;
     height: 596px;
 
@@ -68,7 +69,7 @@
   }
 
   &--greece::after {
-    background: url("../../img/greece-review-desktop@1x.jpg") no-repeat;
+    background: url("../../img/greece-review-desktop@1x.jpg") no-repeat #b3cfe9;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../../img/greece-review-desktop@2x.jpg");
@@ -76,7 +77,7 @@
   }
 
   &--albania::after {
-    background: url("../../img/albania-review-desktop@1x.jpg") no-repeat;
+    background: url("../../img/albania-review-desktop@1x.jpg") no-repeat #14999c;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../../img/albania-review-desktop@2x.jpg");
@@ -84,7 +85,7 @@
   }
 
   &--macedonia::after {
-    background: url("../../img/macedonia-review-desktop@1x.jpg") no-repeat;
+    background: url("../../img/macedonia-review-desktop@1x.jpg") no-repeat #a8d3da;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../../img/macedonia-review-desktop@2x.jpg");
@@ -92,7 +93,7 @@
   }
 
   &--montenegro::after {
-    background: url("../../img/montenegro-review-desktop@1x.jpg") no-repeat;
+    background: url("../../img/montenegro-review-desktop@1x.jpg") no-repeat #97c654;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../../img/montenegro-review-desktop@2x.jpg");
@@ -100,7 +101,7 @@
   }
 
   &--croatia::after {
-    background: url("../../img/croatia-review-desktop@1x.jpg") no-repeat;
+    background: url("../../img/croatia-review-desktop@1x.jpg") no-repeat #7b6b62;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../../img/croatia-review-desktop@2x.jpg");
@@ -114,11 +115,22 @@
 
 .countries__description-wrapper {
   width: 425px;
+  margin-left: 375px;
   padding-right: 54px;
 
   @media (max-width: $tablet-max-width) {
     width: 100%;
+    margin-left: 0;
     padding-right: 0;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding: 0 16px;
+    padding-bottom: 47px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    padding: 0 21px;
   }
 }
 
@@ -179,6 +191,60 @@
   // }
 }
 
-.countries__reviews {
+.countries__wrapper-reviews {
+  display: flex;
+  margin-right: 375px;
   z-index: 1;
+
+  @media (max-width: $tablet-max-width) {
+    margin-right: 0;
+
+    &--greece {
+      background: url("../../img/greece-review-mobile@1x.jpg") no-repeat #b3cfe9;
+    }
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/greece-review-mobile@2x.jpg");
+    }
+
+    &--albania {
+      background: url("../../img/albania-review-mobile@1x.jpg") no-repeat #14999c;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../../img/albania-review-mobile@2x.jpg");
+      }
+    }
+
+    &--macedonia {
+      background: url("../../img/macedonia-review-mobile@1x.jpg") no-repeat #a8d3da;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../../img/macedonia-review-mobile@2x.jpg");
+      }
+    }
+
+    &--montenegro {
+      background: url("../../img/montenegro-review-mobile@1x.jpg") no-repeat #97c654;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../../img/montenegro-review-mobile@2x.jpg");
+      }
+    }
+
+    &--croatia {
+      background: url("../../img/croatia-review-mobile@1x.jpg") no-repeat #7b6b62;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../../img/croatia-review-mobile@2x.jpg");
+      }
+    }
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    padding-top: 50px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-top: 54px;
+  }
 }

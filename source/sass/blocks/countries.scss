@@ -1,0 +1,184 @@
+.countries {
+  // padding-right: 640px;
+  padding-bottom: 1000px;
+  background: url("../../img/europe-map-desktop@1x.png") no-repeat 238px 130px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../../img/europe-map-desktop@2x.png");
+  }
+
+  @media (max-width: $tablet-max-width) {
+    background: none;
+  }
+}
+
+.countries__name-list,
+.countries__description-list {
+  @include reset-list;
+}
+
+.countries__name-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 90px;
+  padding-bottom: 12px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.42px;
+  color: rgba($color-granite, 0.3);
+  border-bottom: 1px solid rgba($color-granite, 0.3);
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 26px;
+  }
+
+  @media (max-width: $tablet-max-width) {
+    flex-wrap: nowrap;
+  }
+}
+
+.countries__name-item {
+  &:not(:last-child) {
+    margin-right: 99px;
+  }
+}
+
+.countries__description-item {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+  &:not(:first-child) {
+    display: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: 270px;
+    width: 430px;
+    height: 596px;
+
+    @media (max-width: $tablet-max-width) {
+      display: none;
+    }
+  }
+
+  &--greece::after {
+    background: url("../../img/greece-review-desktop@1x.jpg") no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/greece-review-desktop@2x.jpg");
+    }
+  }
+
+  &--albania::after {
+    background: url("../../img/albania-review-desktop@1x.jpg") no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/albania-review-desktop@2x.jpg");
+    }
+  }
+
+  &--macedonia::after {
+    background: url("../../img/macedonia-review-desktop@1x.jpg") no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/macedonia-review-desktop@2x.jpg");
+    }
+  }
+
+  &--montenegro::after {
+    background: url("../../img/montenegro-review-desktop@1x.jpg") no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/montenegro-review-desktop@2x.jpg");
+    }
+  }
+
+  &--croatia::after {
+    background: url("../../img/croatia-review-desktop@1x.jpg") no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/croatia-review-desktop@2x.jpg");
+    }
+  }
+
+  @media (max-width: $tablet-max-width) {
+    flex-direction: column;
+  }
+}
+
+.countries__description-wrapper {
+  width: 425px;
+  padding-right: 54px;
+
+  @media (max-width: $tablet-max-width) {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
+.countries__name {
+  @include reset-indent;
+  position: relative;
+  padding-bottom: 48px;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 90px;
+  letter-spacing: -1.24px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 32px;
+    left: 0;
+    width: 175px;
+    border: 1px solid $color-coral;
+
+    @media (max-width: $tablet-max-width) {
+      display: none;
+    }
+  }
+
+  @media (max-width: $tablet-max-width) {
+    padding-bottom: 20px;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    font-size: 24px;
+  }
+}
+
+.countries__description {
+  @include reset-indent;
+  padding-bottom: 49px;
+  letter-spacing: -0.46px;
+  color: rgba($color-granite, 0.7);
+
+  @media (max-width: $tablet-max-width) {
+    padding-bottom: 20px;
+    text-align: center;
+  }
+}
+
+.countries__button {
+  width: 250px;
+
+  @media (max-width: $mobile-max-width) {
+    width: 100%;
+  }
+  // @media (max-width: $tablet-max-width) {
+  //   max-width: 100%;
+  // }
+}
+
+.countries__reviews {
+  z-index: 1;
+}

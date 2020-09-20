@@ -1,9 +1,10 @@
 .places {
   padding-top: 200px;
-  padding-bottom: 100px;
+  // padding-bottom: 100px;
 
   @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
     padding-top: 10px;
+    padding-bottom: 7px;
   }
 
   @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
@@ -86,7 +87,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-bottom: 101px;
+  margin-bottom: 100px;
 
   &:hover .places__user {
     display: flex;
@@ -101,6 +102,7 @@
 
     @media (max-width: $mobile-max-width) {
       margin-right: 0;
+      margin-bottom: 35px;
     }
   }
 
@@ -109,12 +111,11 @@
   }
 
   @media (max-width: $tablet-max-width) {
-    margin-bottom: 35px;
+    margin-bottom: 19px;
   }
 
   @media (max-width: $mobile-max-width) {
-    // width: 100%;
-    // margin: 0 auto;
+    margin-bottom: 35px;
   }
 }
 

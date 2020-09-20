@@ -1,0 +1,97 @@
+.reviews__title,
+.reviews__item,
+.reviews__text,
+.reviews__user-name {
+  @include reset-indent;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 382px;
+  padding: 30px;
+  background-color: $color-white;
+}
+
+.reviews__title {
+  position: relative;
+  padding-bottom: 32px;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+  letter-spacing: -0.69px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 68px;
+    border: 1px solid $color-coral;
+  }
+
+  @media (max-width: mobile-max-width) {
+    padding-bottom: 31px;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
+}
+
+.reviews__text {
+  padding-bottom: 40px;
+  font-size: 14px;
+  letter-spacing: -0.408px;
+  color: rgba($color-granite, 0.7);
+
+  @media (max-width: mobile-max-width) {
+    padding-bottom: 20px;
+    text-align: center;
+  }
+}
+
+.reviews__user-name {
+  position: relative;
+  padding-left: 54px;
+  font-family: "Poppins", "Arial", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 24px;
+  // letter-spacing: -0.46px;
+
+  @media (max-width: mobile-max-width) {
+    text-align: center;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    width: 38px;
+    height: 38px;
+  }
+
+  &--greece::before {
+    background: url("../../img/user-greece.png") no-repeat;
+  }
+
+  &--albania::before {
+    background: url("../../img/user-albania.png") no-repeat;
+  }
+
+  &--macedonia::before {
+    background: url("../../img/user-macedonia.png") no-repeat;
+  }
+
+  &--montenegro::before {
+    background: url("../../img/user-montenegro.png") no-repeat;
+  }
+
+  &--croatia::before {
+    background: url("../../img/user-croatia.png") no-repeat;
+  }
+}

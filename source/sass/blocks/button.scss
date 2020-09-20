@@ -1,12 +1,15 @@
 .button {
-  padding: 30px 40px;
   width: 340px;
   font-size: 12px;
   line-height: 15px;
   font-weight: 700;
   text-transform: uppercase;
+  text-align: center;
   letter-spacing: 2px;
-  background-color: $color-coral;
+
+  &:hover {
+    background-color: $color-orange;
+  }
 
   @media (max-width: $mobile-max-width) {
     width: 100%;
@@ -17,10 +20,6 @@
     font-size: 10px;
     line-height: 12px;
     font-weight: 500;
-    padding-top: 19px;
-    padding-right: 20px;
-    padding-bottom: 19px;
-    padding-left: 40px;
   }
 
   @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
@@ -36,15 +35,16 @@
 
 .button__link {
   position: relative;
+  padding: 30px 40px;
+  padding-right: 10px;
   color: $color-white;
-  padding-right: 135px;
+  background-color: $color-coral;
 
-  @media (max-width: $mobile-max-width) {
-    padding-right: 103px;
-  }
-
-  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-    padding-right: 65px;
+  @media (max-width: $tablet-max-width) {
+    padding-top: 19px;
+    padding-right: 20px;
+    padding-bottom: 19px;
+    padding-left: 40px;
   }
 }
 

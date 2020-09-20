@@ -100,3 +100,16 @@
     padding-bottom: 9px;
   }
 }
+
+.promo__wrapper-button {
+  padding-right: 135px;
+
+  @media (max-width: $mobile-max-width) {
+    padding-right: 103px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    padding-right: 65px;
+  }
+}
+

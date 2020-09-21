@@ -1,15 +1,5 @@
 .button {
   width: 340px;
-  font-size: 12px;
-  line-height: 15px;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 2px;
-
-  &:hover {
-    background-color: $color-orange;
-  }
 
   @media (max-width: $mobile-max-width) {
     width: 100%;
@@ -28,18 +18,23 @@
   }
 }
 
-// .promo__wrapper-button {
-//   position: relative;
-// }
-
-
 .button__link {
   position: relative;
   display: block;
   padding: 30px 40px;
   padding-right: 10px;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   color: $color-white;
   background-color: $color-coral;
+
+  &:hover {
+    background-color: $color-orange;
+  }
 
   @media (max-width: $tablet-max-width) {
     padding-top: 19px;

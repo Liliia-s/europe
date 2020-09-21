@@ -1,0 +1,28 @@
+.support {
+  padding-bottom: 300px;
+}
+
+.support__wrapper {
+  padding-top: 70px;
+  padding-left: 526px;
+  background: url("../../img/sunset-background-desktop@1x.jpg") no-repeat #ff9485 100% 100%;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background: url("../../img/sunset-background-desktop@2x.jpg");
+  }
+
+  @media (max-width: $tablet-max-width) {
+    display: flex;
+    padding-left: 0;
+    padding-bottom: 76px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-top: 0;
+    background: none;
+  }
+}
+
+.support__modal {
+  margin: 0 auto;
+}

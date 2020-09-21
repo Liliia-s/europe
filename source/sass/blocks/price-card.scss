@@ -1,0 +1,172 @@
+.price-card {
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+  padding-top: 40px;
+  // padding-right: 30px;
+  padding-bottom: 30px;
+  // padding-left: 30px;
+  width: 370px;
+  border: 1px solid rgba($color-granite, 0.3);
+  border-radius: 6px;
+
+  &:hover,
+  &:active {
+    border: 3px solid $color-coral;
+  }
+
+  &:hover .price-card__title,
+  &:hover .price-card__price,
+  &:active .price-card__title,
+  &:active .price-card__price {
+    color: $color-coral;
+  }
+
+  @media (max-width: $tablet-max-width) {
+    padding-top: 30px;
+    padding-bottom: 0;
+    width: 288px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 100%;
+  }
+}
+
+.price-card__wrapper {
+  margin-bottom: auto;
+  padding-right: 30px;
+  padding-left: 30px;
+
+  @media (max-width: $tablet-max-width) {
+    padding-right: 28px;
+    padding-left: 28px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+}
+
+.price-card__wrapper-title {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 43px;
+
+  @media (max-width: $tablet-max-width) {
+    display: block;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+}
+
+.price-card__title {
+  @include reset-indent;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 34px;
+  color: rgba($color-black-blue, 0.7);
+
+  @media (max-width: $tablet-max-width) {
+    padding-bottom: 11px;
+    font-size: 24px;
+    text-align: center;
+  }
+}
+
+.price-card__price {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 34px;
+  text-align: right;
+  color: rgba($color-black-blue, 0.7);
+
+
+  @media (max-width: $tablet-max-width) {
+    text-align: center;
+  }
+}
+
+.price-card__description {
+  @include reset-indent;
+  position: relative;
+  margin-bottom: 30px;
+  padding-bottom: 28px;
+  line-height: 24px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 310px;
+    border: 1px solid rgba($color-granite, 0.3);
+
+    @media (max-width: $tablet-max-width) {
+      width: 248px;
+      left: -8px;
+    }
+  }
+
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 20px;
+    padding-bottom: 11px;
+    text-align: center;
+  }
+}
+
+.price-card__list {
+  @include reset-list;
+  padding-bottom: 27px;
+  padding-right: 34px;
+
+  @media (max-width: $tablet-max-width) {
+    padding-right: 0;
+    padding-bottom: 32px;
+  }
+}
+
+.price-card__item {
+  position: relative;
+  padding-left: 30px;
+  line-height: 32px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 14px;
+    height: 12px;
+    background: url("../../img/icon-tick.svg") no-repeat;
+
+    @media (max-width: $mobile-max-width) {
+      top: 8px;
+    }
+  }
+
+  &:not(:last-child) {
+    padding-bottom: 15px;
+
+    @media (max-width: $tablet-max-width) {
+      padding-bottom: 10px;
+      padding-left: 15px;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      padding-left: 22px;
+      padding-bottom: 8px;
+    }
+  }
+}
+
+.price-card__button {
+  width: 100%;
+  padding-right: 30px;
+  padding-left: 30px;
+
+  @media (max-width: $tablet-max-width) {
+    padding: 0;
+  }
+}

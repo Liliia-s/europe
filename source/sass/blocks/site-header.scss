@@ -128,21 +128,13 @@
 .site-header__wrapper-tel {
   display: flex;
   flex-wrap: nowrap;
+  padding-right: 15px;
 
   @media (max-width: $tablet-max-width) {
     display: none;
   }
 }
 
-.site-header__icon-tel {
-  margin-right: 8px;
-  fill: none;
-}
-
-.site-header__nav-tel {
-  padding-right: 15px;
-  font-size: 18px;
-  line-height: 32px;
-  color: $color-coral;
-  text-decoration: underline;
-}
+// .site-header__nav-tel {
+//   padding-right: 15px;
+// }

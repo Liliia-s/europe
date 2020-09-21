@@ -20,8 +20,8 @@
     padding-right: 20px;
   }
 
-  @media ($tablet-width) and (max-width: $tablet-max-width) {
-    width: 382px;
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    padding-bottom: 36px;
   }
 }
 

@@ -52,14 +52,10 @@
 
 .countries__description-item {
   position: relative;
-  display: flex;
+  display: none;
   // margin: 0 375px;
   flex-wrap: nowrap;
   justify-content: space-between;
-
-  &:not(:first-child) {
-    display: none;
-  }
 
   &::after {
     content: "";
@@ -306,4 +302,17 @@
 
 .countries__reviews {
   margin: 0 auto;
+}
+
+.countries__name-item--active {
+  color: $color-coral;
+  cursor: pointer;
+}
+
+// .countries__description-item {
+//   display: none;
+// }
+
+.countries__description-item--show {
+  display: flex;
 }

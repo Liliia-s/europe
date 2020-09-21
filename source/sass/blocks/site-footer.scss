@@ -1,0 +1,120 @@
+.site-footer {
+  padding-top: 40px;
+}
+
+.site-footer__list {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-left: 11px;
+
+  @media (max-width: tablet-max-width) {
+    flex-direction: column;
+  }
+}
+
+.site-footer__item {
+  &--group {
+    display: flex;
+    padding-right: 52px;
+    border-right: 1px solid #d7d9df;
+  }
+
+  &--travel {
+    padding-left: 50px;
+  }
+  // @media (max-width: mobile-max-width) {
+  //   flex-direction: column;
+  // }
+}
+
+.site-footer__group {
+  &:not(:last-child) {
+    padding-right: 70px;
+  }
+
+  &--countries {
+    border-right: 1px solid #d7d9df;
+  }
+
+  &--contacts {
+    padding-left: 87px;
+  }
+}
+
+.site-footer__title {
+  @include reset-indent;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  color: $color-black-blue;
+
+  &--countries {
+    padding-bottom: 22px;
+  }
+
+  &--contacts {
+    padding-bottom: 22px;
+  }
+
+  &--travel {
+    padding-bottom: 22px;
+  }
+
+  @media (max-width: mobile-max-width) {
+    text-align: center;
+  }
+}
+
+.site-footer__wrapper-countries {
+  display: flex;
+}
+
+.site-footer__countries-list,
+.site-footer__travel {
+  font-size: 14px;
+  color: rgba($color-black-blue, 0.5);
+}
+
+.site-footer__countries-list {
+  line-height: 17px;
+
+  &:not(:last-child) {
+    padding-right: 50px;
+  }
+}
+
+.site-footer__travel {
+  line-height: 24px;
+}
+
+.site-footer__countries-list,
+.site-footer__contacts {
+  @include reset-list;
+}
+
+.site-footer__contacts-item--mail {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.site-footer__icon-mail {
+  padding-right: 5px;
+}
+
+.site-footer__contacts-mail {
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration-line: underline;
+  color: $color-coral;
+}
+
+.site-footer__countries-item {
+  &:not(:last-child) {
+    padding-bottom: 10px;
+  }
+}
+
+.site-footer__travel {
+  @include reset-indent;
+  padding-right: 5px;
+}

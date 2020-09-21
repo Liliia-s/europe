@@ -311,7 +311,7 @@
     <section class="support">
       <!-- <section class="support container"> -->
       <div class="support__wrapper">
-        <form action="" class="support__modal modal container">
+        <form class="support__modal modal container">
           <h3 class="modal__title">У Вас остались вопросы?</h3>
           <p class="modal__text">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
           <div class="modal__wrapper">
@@ -331,41 +331,53 @@
   </main>
   <footer class="site-footer container">
     <div class="site-footer__list">
-      <div class="site-footer__wrapper-list">
-        <div class="site-footer__item">
-          <p class="site-footer__title">Следующие путешествия</p>
-          <ul class="site-footer__countries-list">
-            <li class="site-footer__countries-item">Марсель</li>
-            <li class="site-footer__countries-item">Ним</li>
-            <li class="site-footer__countries-item">Монпелье</li>
-            <li class="site-footer__countries-item">Барселона</li>
-            <li class="site-footer__countries-item">Пальма</li>
-          </ul>
-          <ul class="site-footer__countries-list">
-            <li class="site-footer__countries-item">Сардиния</li>
-            <li class="site-footer__countries-item">Палермо</li>
-            <li class="site-footer__countries-item">Катания</li>
-            <li class="site-footer__countries-item">Неаполь</li>
-            <li class="site-footer__countries-item">Рим</li>
-          </ul>
-          <ul class="site-footer__countries-list">
-            <li class="site-footer__countries-item">Корс</li>
-            <li class="site-footer__countries-item">Ницца</li>
-            <li class="site-footer__countries-item">Монако</li>
-            <li class="site-footer__countries-item">Динь-ле-Бен</li>
-            <li class="site-footer__countries-item">Гренобль</li>
-          </ul>
+      <div class="site-footer__item site-footer__item--group">
+        <div class="site-footer__group site-footer__group--countries">
+          <p class="site-footer__title site-footer__title--countries">Следующие путешествия</p>
+          <div class="site-footer__wrapper-countries">
+            <ul class="site-footer__countries-list">
+              <li class="site-footer__countries-item">Марсель</li>
+              <li class="site-footer__countries-item">Ним</li>
+              <li class="site-footer__countries-item">Монпелье</li>
+              <li class="site-footer__countries-item">Барселона</li>
+              <li class="site-footer__countries-item">Пальма</li>
+            </ul>
+            <ul class="site-footer__countries-list">
+              <li class="site-footer__countries-item">Сардиния</li>
+              <li class="site-footer__countries-item">Палермо</li>
+              <li class="site-footer__countries-item">Катания</li>
+              <li class="site-footer__countries-item">Неаполь</li>
+              <li class="site-footer__countries-item">Рим</li>
+            </ul>
+            <ul class="site-footer__countries-list">
+              <li class="site-footer__countries-item">Корс</li>
+              <li class="site-footer__countries-item">Ницца</li>
+              <li class="site-footer__countries-item">Монако</li>
+              <li class="site-footer__countries-item">Динь-ле-Бен</li>
+              <li class="site-footer__countries-item">Гренобль</li>
+            </ul>
+          </div>
         </div>
-        <div class="site-footer__item">
-          <p class="site-footer__title">Наши контакты</p>
+        <div class="site-footer__group site-footer__group--contacts">
+          <p class="site-footer__title site-footer__title--contacts">Наши контакты</p>
           <ul class="site-footer__contacts">
-            <li class="site-footer__contacts-item">puteshestviemechta@gmail.ru</li>
-            <li class="site-footer__contacts-item">+7 (499) -784-684-46</li>
+            <li class="site-footer__contacts-item site-footer__contacts-item--mail">
+              <svg class="site-footer__icon-mail" width="30" height="30">
+                <use xlink:href="img/sprite.svg#icon-mail"></use>
+              </svg>
+              <a class="site-footer__contacts-mail" href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
+            </li>
+            <li class="site-footer__contacts-item tel">
+              <svg class="tel__icon" width="26" height="20">
+                <use xlink:href="img/sprite.svg#icon-phone"></use>
+              </svg>
+              <a class="tel__number" href="tel:749978468446">+7 (499) -784-684-46</a>
+            </li>
           </ul>
         </div>
       </div>
-      <div class="site-footer__item">
-        <p class="site-footer__title">Корпоративные путешествия</p>
+      <div class="site-footer__item site-footer__item--travel">
+        <p class="site-footer__title site-footer__title--travel">Корпоративные путешествия</p>
         <p class="site-footer__travel">Также вы можете заказать индивидуальное путешествие под вашу компанию. Подобные туры очень сближают компанию, помогают поддерживать корпоративный дух, а также являются оличным времяпрепровождением</p>
       </div>
     </div>

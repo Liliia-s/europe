@@ -1,5 +1,9 @@
 .support {
   padding-bottom: 200px;
+
+  @media (max-width: $tablet-max-width) {
+    padding-bottom: 40px;
+  }
 }
 
 .support__wrapper {
@@ -19,6 +23,7 @@
 
   @media (max-width: $mobile-max-width) {
     padding-top: 0;
+    padding-bottom: 21px;
     background: none;
   }
 }

@@ -1,5 +1,11 @@
 .tel__icon {
-  margin-right: 8px;
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 30px;
+  height: 30px;
+  // margin-right: 8px;
   fill: none;
 }
 
@@ -12,10 +18,16 @@
 }
 
 .tel__number {
+  position: relative;
+  padding-left: 33px;
   font-size: 18px;
   line-height: 32px;
   color: $color-coral;
   text-decoration: underline;
+
+  &--small {
+    font-size: 16px;
+  }
 }
 
 .tel__number--black {

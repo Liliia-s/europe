@@ -1,5 +1,15 @@
 .site-footer {
   padding-top: 40px;
+  padding-bottom: 72px;
+
+  @media (max-width: $tablet-max-width) {
+    padding-bottom: 49px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-top: 0;
+    padding-bottom: 27px;
+  }
 }
 
 .site-footer__list {
@@ -7,37 +17,84 @@
   flex-wrap: nowrap;
   padding-left: 11px;
 
-  @media (max-width: tablet-max-width) {
+  @media (max-width: $tablet-max-width) {
     flex-direction: column;
+    padding-left: 0;
   }
 }
 
 .site-footer__item {
   &--group {
     display: flex;
-    padding-right: 52px;
+    width: 806px;
+    // padding-right: 52px;
     border-right: 1px solid #d7d9df;
+
+    @media (max-width: $tablet-max-width) {
+      width: 100%;
+      margin-bottom: 31px;
+      padding-bottom: 26px;
+      border-right: none;
+      border-bottom: 1px solid #d7d9df;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      flex-direction: column;
+      margin-bottom: 26px;
+      padding-bottom: 0;
+    }
   }
 
   &--travel {
     padding-left: 50px;
+
+    @media (max-width: $tablet-max-width) {
+      padding-left: 0;
+    }
   }
-  // @media (max-width: mobile-max-width) {
-  //   flex-direction: column;
-  // }
+
+  @media (max-width: $mobile-max-width) {
+    text-align: center;
+  }
 }
 
 .site-footer__group {
-  &:not(:last-child) {
-    padding-right: 70px;
-  }
+  // &:not(:last-child) {
+  //   padding-right: 70px;
+  // }
 
   &--countries {
+    width: 393px;
     border-right: 1px solid #d7d9df;
+
+    @media (max-width: $tablet-max-width) {
+      width: 54%;
+    }
+
+    @media (max-width: $tablet-max-width) {
+      text-align: center;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      width: 100%;
+      border-right: none;
+    }
   }
 
   &--contacts {
-    padding-left: 87px;
+    width: 390px;
+    padding-left: 88px;
+
+    @media (max-width: $tablet-max-width) {
+      padding-left: 55px;
+      width: 40%;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      padding-left: 0;
+      width: 100%;
+      text-align: center;
+    }
   }
 }
 
@@ -58,15 +115,27 @@
 
   &--travel {
     padding-bottom: 22px;
+
+    @media (max-width: $tablet-max-width) {
+      text-align: center;
+    }
   }
 
-  @media (max-width: mobile-max-width) {
+  @media (max-width: $mobile-max-width) {
     text-align: center;
   }
 }
 
 .site-footer__wrapper-countries {
   display: flex;
+
+  @media (max-width: $mobile-max-width) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d7d9df;
+  }
 }
 
 .site-footer__countries-list,
@@ -75,46 +144,81 @@
   color: rgba($color-black-blue, 0.5);
 }
 
-.site-footer__countries-list {
-  line-height: 17px;
-
-  &:not(:last-child) {
-    padding-right: 50px;
-  }
-}
-
-.site-footer__travel {
-  line-height: 24px;
-}
-
 .site-footer__countries-list,
 .site-footer__contacts {
   @include reset-list;
 }
 
-.site-footer__contacts-item--mail {
-  display: flex;
-  flex-wrap: nowrap;
-}
-
-.site-footer__icon-mail {
-  padding-right: 5px;
-}
-
-.site-footer__contacts-mail {
-  font-size: 14px;
+.site-footer__countries-list {
   line-height: 17px;
-  text-decoration-line: underline;
-  color: $color-coral;
-}
 
-.site-footer__countries-item {
   &:not(:last-child) {
-    padding-bottom: 10px;
+    padding-right: 50px;
+
+    @media (max-width: $mobile-max-width) {
+      padding-right: 0;
+      padding-bottom: 20px;
+    }
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin: 0 auto;
+    width: 50%;
   }
 }
 
 .site-footer__travel {
   @include reset-indent;
   padding-right: 5px;
+  line-height: 24px;
+}
+
+
+.site-footer__contacts-item {
+  justify-content: center;
+
+  &--mail {
+    padding-bottom: 7px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-bottom: 18px;
+  }
+}
+
+.site-footer__contacts-mail {
+  position: relative;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration-line: underline;
+  color: $color-coral;
+
+  @media (max-width: $mobile-max-width) {
+    display: none;
+  }
+}
+
+.site-footer__contacts-mail--postoffice {
+  display: none;
+
+  @media (max-width: $mobile-max-width) {
+    display: block;
+    padding-left: 28px;
+  }
+}
+
+.site-footer__icon-mail {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -11px;
+  width: 30px;
+  height: 30px;
+  // margin-right: 11px;
+}
+
+.site-footer__countries-item {
+  &:not(:last-child) {
+    padding-bottom: 10px;
+  }
 }

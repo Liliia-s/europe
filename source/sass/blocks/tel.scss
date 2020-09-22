@@ -7,13 +7,28 @@
   height: 30px;
   // margin-right: 8px;
   fill: none;
-}
 
-.tel__icon--black {
-  margin-right: 16px;
+  &--header {
+    top: 0;
+    left: -5px;
+  }
 
-  @media (max-width: $tablet-max-width) {
-    display: none;
+  &--black {
+    top: -4px;
+    left: -30px;
+
+    @media (max-width: $tablet-max-width) {
+      display: none;
+    }
+  }
+
+  &--footer {
+    top: -8px;
+    left: 0;
+
+    @media (max-width: $tablet-max-width) {
+      left: -10px;
+    }
   }
 }
 
@@ -25,12 +40,21 @@
   color: $color-coral;
   text-decoration: underline;
 
+  @media (max-width: $tablet-max-width) {
+    padding-left: 0;
+  }
+
   &--small {
     font-size: 16px;
+  }
+
+  &--footer {
+    padding-left: 33px;
   }
 }
 
 .tel__number--black {
+  // padding-left: 10px;
   font-size: 20px;
   color: $color-black;
   text-decoration: none;

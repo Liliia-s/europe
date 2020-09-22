@@ -1,5 +1,8 @@
 .support {
-  padding-bottom: 200px;
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: 130px;
+  max-width: 1920px;
 
   @media (max-width: $tablet-max-width) {
     padding-bottom: 40px;
@@ -8,11 +11,37 @@
 
 .support__wrapper {
   padding-top: 70px;
-  padding-left: 526px;
-  background: url("../../img/sunset-background-desktop@1x.jpg") no-repeat #ff9485 100% 100%;
+  padding-left: 550px;
+  // margin-left: 387px;
+  // margin-right: 670px;
+  padding-bottom: 70px;
 
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background: url("../../img/sunset-background-desktop@2x.jpg");
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 384px;
+    width: 844px;
+    height: 455px;
+    background: url("../../img/sunset-background-desktop@1x.jpg") no-repeat #ff9485 37% 0%;
+    z-index: -1;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: url("../../img/sunset-background-desktop@2x.jpg");
+    }
+
+    @media (max-width: $tablet-max-width) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    background: url("../../img/sunset-background-tablet@1x.jpg") no-repeat #ff9485;
+    background-size: cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: url("../../img/sunset-background-tablet@2x.jpg");
+    }
   }
 
   @media (max-width: $tablet-max-width) {
@@ -30,4 +59,5 @@
 
 .support__modal {
   margin: 0 auto;
+  box-shadow: 0 4px 30px rgba(#293642, 0.1);
 }

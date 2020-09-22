@@ -128,7 +128,7 @@
 .site-header__wrapper-tel {
   display: flex;
   flex-wrap: nowrap;
-  padding-right: 15px;
+  // padding-right: 15px;
 
   @media (max-width: $tablet-max-width) {
     display: none;

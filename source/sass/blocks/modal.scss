@@ -5,7 +5,7 @@
 
   @media (max-width: $mobile-max-width) {
     padding: 0 16px;
-    padding-top: 41px;
+    padding-top: 52px;
     padding-bottom: 58px;
     width: 100%;
     background-color: $color-gray;
@@ -64,16 +64,16 @@
 
   &--tel {
     position: relative;
-  }
 
-  &::before {
-    content: "*";
-    position: absolute;
-    top: 3px;
-    left: 15px;
-    width: 6px;
-    height: 6px;
-    color: $color-coral;
+    &::before {
+      content: "*";
+      position: absolute;
+      top: 3px;
+      left: 15px;
+      width: 6px;
+      height: 6px;
+      color: $color-coral;
+    }
   }
 }
 

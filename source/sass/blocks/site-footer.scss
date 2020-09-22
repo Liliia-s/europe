@@ -1,6 +1,6 @@
 .site-footer {
   padding-top: 40px;
-  padding-bottom: 72px;
+  padding-bottom: 48px;
 
   @media (max-width: $tablet-max-width) {
     padding-bottom: 49px;
@@ -46,7 +46,7 @@
   }
 
   &--travel {
-    padding-left: 50px;
+    padding-left: 44px;
 
     @media (max-width: $tablet-max-width) {
       padding-left: 0;
@@ -67,13 +67,13 @@
     width: 393px;
     border-right: 1px solid #d7d9df;
 
-    @media (max-width: $tablet-max-width) {
-      width: 54%;
+    @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+      width: 56%;
     }
 
-    @media (max-width: $tablet-max-width) {
-      text-align: center;
-    }
+    // @media (max-width: $tablet-max-width) {
+    //   text-align: center;
+    // }
 
     @media (max-width: $mobile-max-width) {
       width: 100%;
@@ -110,7 +110,15 @@
   }
 
   &--contacts {
-    padding-bottom: 22px;
+    padding-bottom: 15px;
+
+    @media (max-width: $tablet-max-width) {
+      padding-bottom: 17px;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      padding-bottom: 14px;
+    }
   }
 
   &--travel {
@@ -171,6 +179,10 @@
   @include reset-indent;
   padding-right: 5px;
   line-height: 24px;
+
+  @media (max-width: $tablet-max-width) {
+    padding-right: 0;
+  }
 }
 
 
@@ -178,22 +190,23 @@
   justify-content: center;
 
   &--mail {
-    padding-bottom: 7px;
+    padding-bottom: 17px;
   }
 
   @media (max-width: $mobile-max-width) {
-    padding-bottom: 18px;
+    padding-bottom: 16px;
   }
 }
 
 .site-footer__contacts-mail {
   position: relative;
+  padding-left: 40px;
   font-size: 14px;
   line-height: 17px;
   text-decoration-line: underline;
   color: $color-coral;
 
-  @media (max-width: $mobile-max-width) {
+  @media (max-width: $tablet-max-width) {
     display: none;
   }
 }
@@ -201,20 +214,29 @@
 .site-footer__contacts-mail--postoffice {
   display: none;
 
-  @media (max-width: $mobile-max-width) {
-    display: block;
-    padding-left: 28px;
+  @media (max-width: $tablet-max-width) {
+    position: relative;
+  }
+
+  @media (max-width: $tablet-max-width) {
+    display: inline-block;
+    padding-left: 36px;
   }
 }
 
 .site-footer__icon-mail {
   content: "";
   position: absolute;
-  top: -4px;
-  left: -11px;
+  top: 0;
+  left: 0;
   width: 30px;
   height: 30px;
   // margin-right: 11px;
+
+  @media (max-width: $tablet-max-width) {
+    top: -3px;
+    left: -7px;
+  }
 }
 
 .site-footer__countries-item {

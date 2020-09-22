@@ -61,7 +61,7 @@
   color: rgba($color-granite, 0.7);
 
   @media (max-width: $tablet-max-width) {
-    max-width: 45%;
+    max-width: 50%;
     margin: 0 auto;
     padding-bottom: 40px;
     text-align: center;
@@ -95,10 +95,10 @@
   }
 
   &:not(:last-child):not(:nth-child(3n)) {
-    margin-right: 60px;
+    margin-right: 52px;
 
     @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-      margin-right: 29px;
+      margin-right: 0;
     }
 
     @media (max-width: $mobile-max-width) {
@@ -108,7 +108,9 @@
   }
 
   @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-    margin-right: 29px;
+    &:not(:last-child):not(:nth-child(2n)) {
+      margin-right: 29px;
+    }
   }
 
   @media (max-width: $tablet-max-width) {

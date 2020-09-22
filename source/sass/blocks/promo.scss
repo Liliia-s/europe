@@ -3,9 +3,15 @@
   padding-bottom: 295px;
   color: $color-white;
   background: url("../../img/greece-background-desktop@1x.jpg") no-repeat #92b3dc;
+  background-size: cover;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../../img/greece-background-desktop@2x.jpg");
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    padding-top: 60px;
+    padding-bottom: 83px;
   }
 
   @media (max-width: $mobile-max-width) {
@@ -13,18 +19,26 @@
     padding-bottom: 100px;
     background: none;
   }
-
-  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-    padding-top: 60px;
-    padding-bottom: 83px;
-  }
 }
+
+// .promo__wrapper-background {
+//   background: url("../../img/greece-background-desktop@1x.jpg") no-repeat #92b3dc;
+//   background-size: cover;
+
+//   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+//     background-image: url("../../img/greece-background-desktop@2x.jpg");
+//   }
+
+//   @media (max-width: $mobile-max-width) {
+//     background: none;
+//   }
+// }
 
 .promo__wrapper {
   display: flex;
   flex-direction: column;
-  max-width: 412px;
-  margin-right: 433px;
+  max-width: 454px;
+  // margin-right: 433px;
   margin-left: auto;
 
   @media (max-width: $tablet-max-width) {
@@ -40,12 +54,19 @@
 }
 
 .promo__wrapper-title {
+  background: none;
+
   @media (max-width: $mobile-max-width) {
     padding: 0 16px;
     padding-top: 82px;
     padding-bottom: 52px;
     margin-bottom: 20px;
     background: url("../../img/greece-background-mobile@1x.jpg") no-repeat #92b3dc;
+    background-size: cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/greece-background-mobile@2x.jpg");
+    }
   }
 }
 
@@ -71,11 +92,11 @@
   }
 }
 
-.promo__wrapper-description {
-  @media (max-width: $mobile-max-width) {
-    padding: 0 16px;
-  }
-}
+// .promo__wrapper-description {
+//   @media (max-width: $mobile-max-width) {
+//     padding: 0 16px;
+//   }
+// }
 
 .promo__description {
   @include reset-indent;
@@ -108,8 +129,8 @@
     padding-right: 103px;
   }
 
-  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-    padding-right: 65px;
-  }
+  // @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+  //   padding-right: 65px;
+  // }
 }
 

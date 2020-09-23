@@ -1,11 +1,8 @@
 .price-card {
   display: flex;
   flex-direction: column;
-  // justify-content: space-between;
   padding-top: 40px;
-  // padding-right: 30px;
   padding-bottom: 30px;
-  // padding-left: 30px;
   width: 370px;
   border: 1px solid rgba($color-granite, 0.3);
   border-radius: 6px;
@@ -16,10 +13,16 @@
   }
 
   &:hover .price-card__title,
-  &:hover .price-card__price,
-  &:active .price-card__title,
-  &:active .price-card__price {
+  &:hover .price-card__price {
     color: $color-coral;
+  }
+
+  &:hover .price-card__item::before {
+    background: url("../../img/icon-tick-black.svg") no-repeat;
+  }
+
+  &:hover .price-card__description::after {
+    border-color: rgba($color-coral, 0.5);
   }
 
   @media (max-width: $tablet-max-width) {
@@ -30,6 +33,10 @@
 
   @media (max-width: $mobile-max-width) {
     width: 100%;
+  }
+
+  @media (min-width: $desktop-first) and (max-width: $tablet-max-width) {
+    width: 370px;
   }
 }
 

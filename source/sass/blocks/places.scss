@@ -1,6 +1,5 @@
 .places {
   padding-top: 200px;
-  // padding-bottom: 100px;
 
   @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
     padding-top: 10px;
@@ -89,35 +88,23 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 100px;
+  margin-right: 30px;
 
   &:hover .places__user {
     display: flex;
   }
 
-  &:not(:last-child):not(:nth-child(3n)) {
-    margin-right: 52px;
-
-    @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-      margin-right: 0;
-    }
-
-    @media (max-width: $mobile-max-width) {
-      margin-right: 0;
-      margin-bottom: 35px;
-    }
-  }
-
-  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-    &:not(:last-child):not(:nth-child(2n)) {
-      margin-right: 29px;
-    }
-  }
-
   @media (max-width: $tablet-max-width) {
+    margin-right: 20px;
     margin-bottom: 19px;
   }
 
   @media (max-width: $mobile-max-width) {
+    margin-right: 0;
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $desktop-first) and (max-width: $tablet-max-width) {
     margin-bottom: 35px;
   }
 }
@@ -154,13 +141,5 @@
   text-align: center;
   letter-spacing: -0.41px;
   background-color: $color-white;
-
-  // @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-  //   margin: 0 37px;
-  // }
-
-  // @media (max-width: $mobile-max-width) {
-  //   margin: 0 auto;
-  // }
 }
 

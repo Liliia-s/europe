@@ -27,7 +27,6 @@
   &--group {
     display: flex;
     width: 806px;
-    // padding-right: 52px;
     border-right: 1px solid #d7d9df;
 
     @media (max-width: $tablet-max-width) {
@@ -59,21 +58,13 @@
 }
 
 .site-footer__group {
-  // &:not(:last-child) {
-  //   padding-right: 70px;
-  // }
-
   &--countries {
     width: 393px;
     border-right: 1px solid #d7d9df;
 
     @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-      width: 56%;
+      width: 55%;
     }
-
-    // @media (max-width: $tablet-max-width) {
-    //   text-align: center;
-    // }
 
     @media (max-width: $mobile-max-width) {
       width: 100%;
@@ -129,7 +120,7 @@
     }
   }
 
-  @media (max-width: $mobile-max-width) {
+  @media (max-width: $mobile-max-width), (min-width: $desktop-first) and (max-width: $tablet-max-width) {
     text-align: center;
   }
 }
@@ -144,6 +135,10 @@
     padding-bottom: 20px;
     border-bottom: 1px solid #d7d9df;
   }
+
+  @media (min-width: $desktop-first) and (max-width: $tablet-max-width) {
+    justify-content: center;
+  }
 }
 
 .site-footer__countries-list,
@@ -155,6 +150,12 @@
 .site-footer__countries-list,
 .site-footer__contacts {
   @include reset-list;
+}
+
+.site-footer__contacts {
+  @media (min-width: $desktop-first) and (max-width: $tablet-max-width) {
+    text-align: center;
+  }
 }
 
 .site-footer__countries-list {
@@ -182,6 +183,7 @@
 
   @media (max-width: $tablet-max-width) {
     padding-right: 0;
+    text-align: center;
   }
 }
 
@@ -231,7 +233,6 @@
   left: 0;
   width: 30px;
   height: 30px;
-  // margin-right: 11px;
 
   @media (max-width: $tablet-max-width) {
     top: -3px;

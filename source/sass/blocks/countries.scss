@@ -5,18 +5,31 @@
   background: url("../../img/europe-map-desktop@1x.png") no-repeat 238px 130px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background: url("../../img/europe-map-desktop@2x.png");
+    background: url("../../img/europe-map-desktop@2x.png") no-repeat;
   }
 
-  @media (max-width: $tablet-max-width) {
+  @media (max-width: $desktop-min-width) {
+    margin: 0;
     padding-bottom: 0;
     background: none;
+  }
+
+  @media (min-width: $desktop-first) and (max-width: $tablet-max-width) {
+    padding-bottom: 344px;
+    background-position: 50%;
+    background-size: 1204px 800px;
   }
 }
 
 .countries__name-list,
 .countries__description-list {
   @include reset-list;
+}
+
+.countries__description-list {
+  @media (max-width: $desktop-min-width) and (max-width: $tablet-max-width) {
+    margin: 0 auto;
+  }
 }
 
 .countries__name-list {
@@ -31,7 +44,7 @@
   color: rgba($color-granite, 0.3);
   border-bottom: 1px solid rgba($color-granite, 0.3);
 
-  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+  @media (min-width: $tablet-width) and (max-width: $desktop-min-width) {
     margin-bottom: 40px;
   }
 
@@ -39,14 +52,35 @@
     margin-bottom: 26px;
   }
 
-  @media (max-width: $tablet-max-width) {
-    flex-wrap: nowrap;
+  @media (max-width: $mobile-max-width) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @media (min-width: $desktop-min-width) and (max-width: $tablet-max-width) {
+    margin-left: 50px;
+    margin-bottom: 42px;
+  }
+
+  @media (min-width: 1160px) and (max-width: $tablet-max-width) {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1043px;
   }
 }
 
 .countries__name-item {
   &:not(:last-child) {
     margin-right: 99px;
+
+    @media (max-width: $desktop-min-width) {
+      margin-right: 20px;
+      padding-bottom: 10px;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 0;
+    }
   }
 }
 
@@ -62,7 +96,7 @@
     content: "";
     position: absolute;
     top: -10px;
-    right: 631px;
+    right: 644px;
     width: 430px;
     height: 596px;
 
@@ -111,8 +145,12 @@
     }
   }
 
-  @media (max-width: $tablet-max-width) {
+  @media (max-width: $desktop-min-width) {
     flex-direction: column;
+  }
+
+  @media (min-width: $desktop-min-width) and (max-width: $tablet-max-width) {
+    justify-content: center;
   }
 }
 
@@ -121,7 +159,7 @@
   margin-left: 375px;
   padding-right: 54px;
 
-  @media (max-width: $tablet-max-width) {
+  @media (max-width: $desktop-min-width) {
     width: 100%;
     margin-left: 0;
     padding-right: 0;
@@ -135,6 +173,12 @@
   @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
     padding: 0 21px;
     padding-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-first) and (max-width: $tablet-max-width) {
+    margin-left: 70px;
+    margin-right: 10%;
+    padding: 0;
   }
 }
 
@@ -167,6 +211,10 @@
     text-align: center;
   }
 
+  @media (min-width: $desktop-first) {
+    text-align: left;
+  }
+
   @media (max-width: $mobile-max-width) {
     font-size: 24px;
   }
@@ -182,7 +230,7 @@
   letter-spacing: -0.46px;
   color: rgba($color-granite, 0.7);
 
-  @media (max-width: $tablet-max-width) {
+  @media (max-width: $desktop-min-width) {
     padding-bottom: 13px;
     text-align: center;
   }
@@ -195,17 +243,18 @@
 .countries__button {
   width: 250px;
 
-  @media (max-width: $mobile-max-width) {
-    width: 100%;
+  @media (min-width: $desktop-min-width) and (max-width: $tablet-max-width) {
+    margin: 0;
   }
-  // @media (max-width: $tablet-max-width) {
-  //   max-width: 100%;
-  // }
+
+  @media (max-width: $desktop-min-width) {
+    margin: 0 auto;
+  }
 }
 
 .countries__wrapper-reviews {
   display: flex;
-  margin-right: 360px;
+  margin-right: 376px;
   z-index: 1;
 
   @media (max-width: $mobile-max-width) {
@@ -262,7 +311,7 @@
     }
   }
 
-  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+  @media (min-width: $tablet-width) and (max-width: $desktop-min-width) {
     margin-right: 0;
     padding-top: 78px;
 
@@ -316,27 +365,69 @@
     }
   }
 
-  // @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-  //   padding-top: 78px;
-  // }
+  @media (min-width: $desktop-first) and (max-width: $tablet-max-width) {
+    margin-right: 40px;
+    padding-right: 132px;
+    padding-top: 0;
 
-  // @media (max-width: $mobile-max-width) {
-  //   padding-top: 54px;
-  // }
+    &--greece {
+      background: url("../../img/greece-review-mobile@1x.jpg") no-repeat 91% 75%;
+    }
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/greece-review-mobile@2x.jpg");
+    }
+
+    &--albania {
+      background: url("../../img/albania-review-mobile@1x.jpg") no-repeat 91% 75%;
+
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../../img/albania-review-mobile@2x.jpg");
+      }
+    }
+
+    &--macedonia {
+      background: url("../../img/macedonia-review-mobile@1x.jpg") no-repeat 91% 75%;
+
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../../img/macedonia-review-mobile@2x.jpg");
+      }
+    }
+
+    &--montenegro {
+      background: url("../../img/montenegro-review-mobile@1x.jpg") no-repeat 91% 75%;
+
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../../img/montenegro-review-mobile@2x.jpg");
+      }
+    }
+
+    &--croatia {
+      background: url("../../img/croatia-review-mobile@1x.jpg") no-repeat 91% 75%;
+
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../../img/croatia-review-mobile@2x.jpg");
+      }
+    }
+  }
 }
 
 .countries__reviews {
   margin: 0 auto;
+
+  @media (min-width: $desktop-first) and (max-width: $tablet-max-width) {
+    margin: 0;
+  }
 }
 
 .countries__name-item--active {
   color: $color-coral;
   cursor: pointer;
 }
-
-// .countries__description-item {
-//   display: none;
-// }
 
 .countries__description-item--show {
   display: flex;

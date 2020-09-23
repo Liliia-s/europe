@@ -27,16 +27,10 @@
     <nav class="site-header__nav">
       <ul class="site-header__nav-list">
         <li class="site-header__nav-item">
-          <a href="" class="site-header__nav-link">О путешествии</a>
-          <!-- <svg class="site-header__icon-arrow" width="25" height="25">
-            <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
-          </svg> -->
+          <a href="#travel" class="site-header__nav-link">О путешествии</a>
         </li>
         <li class="site-header__nav-item">
-          <a href="" class="site-header__nav-link">Цены</a>
-          <!-- <svg class="site-header__icon-arrow" width="25" height="25">
-            <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
-          </svg> -->
+          <a href="#prices" class="site-header__nav-link">Цены</a>
         </li>
       </ul>
     </nav>
@@ -50,25 +44,20 @@
   </header>
   <main class="site-main">
     <section class="promo">
-      <div class="container">
-        <div class="promo__wrapper">
-          <div class="promo__wrapper-title">
-            <h1 class="promo__title">Путешествие по Европе</h1>
-          </div>
-          <div class="promo__wrapper-description">
-            <p class="promo__description">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
-            <div class="promo__wrapper-button button">
-              <a href="" class="button__link">Смотреть тур
-                <!-- <svg class="button__icon" width="14" height="14">
-                <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
-              </svg> -->
-              </a>
-            </div>
+      <div class="promo__wrapper">
+        <div class="promo__wrapper-title">
+          <h1 class="promo__title">Путешествие по Европе</h1>
+        </div>
+        <div class="promo__wrapper-description">
+          <p class="promo__description">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
+          <div class="promo__wrapper-button button">
+            <a href="#countries" class="button__link button__link--promo">Смотреть тур
+            </a>
           </div>
         </div>
       </div>
     </section>
-    <article class="places container">
+    <article class="places container" id="travel">
       <h2 class="places__title">Места посещения</h2>
       <p class="places__description">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
       <ul class="places__list">
@@ -83,7 +72,7 @@
             <img class="places__photo" src="img/greece-mobile-tablet@1x.jpg" srcset="img/greece-mobile-tablet@2x.jpg 2x" alt="Фото Греции">
           </picture>
           <div class="places__user">
-            <a href="" class="places__button button-card">Смотреть подробнее</a>
+            <a href="#greece" class="places__button button-card">Смотреть подробнее</a>
           </div>
           <p class="places__name">Греция</p>
         </li>
@@ -98,7 +87,7 @@
             <img class="places__photo" src="img/albania-mobile-tablet@1x.jpg" srcset="img/albania-mobile-tablet@2x.jpg 2x" alt="Фото Албании">
           </picture>
           <div class="places__user">
-            <a href="" class="places__button button-card">Смотреть подробнее</a>
+            <a href="#greece" class="places__button button-card">Смотреть подробнее</a>
           </div>
           <p class="places__name">Албания</p>
         </li>
@@ -113,7 +102,7 @@
             <img class="places__photo" src="img/macedonia-mobile-tablet@1x.jpg" srcset="img/macedonia-mobile-tablet@2x.jpg 2x" alt="Фото Македонии">
           </picture>
           <div class="places__user">
-            <a href="" class="places__button button-card">Смотреть подробнее</a>
+            <a href="#greece" class="places__button button-card">Смотреть подробнее</a>
           </div>
           <p class="places__name">Македония</p>
         </li>
@@ -128,7 +117,7 @@
             <img class="places__photo" src="img/montenegro-mobile-tablet@1x.jpg" srcset="img/montenegro-mobile-tablet@2x.jpg 2x" alt="Фото Черногории">
           </picture>
           <div class="places__user">
-            <a href="" class="places__button button-card">Смотреть подробнее</a>
+            <a href="#greece" class="places__button button-card">Смотреть подробнее</a>
           </div>
           <p class="places__name">Черногория</p>
         </li>
@@ -143,25 +132,23 @@
             <img class="places__photo" src="img/croatia-mobile-tablet@1x.jpg" srcset="img/croatia-mobile-tablet@2x.jpg 2x" alt="Фото Хорватии">
           </picture>
           <div class="places__user">
-            <a href="" class="places__button button-card">Смотреть подробнее</a>
+            <a href="#greece" class="places__button button-card">Смотреть подробнее</a>
           </div>
           <p class="places__name">Хорватия</p>
         </li>
       </ul>
     </article>
-    <article class="countries">
+    <article class="countries" id="countries">
       <h2 class="visually-hidden">Страны</h2>
       <div class="container">
         <ul class="countries__name-list">
           <li class="countries__name-item">
             <a class="countries__name-item--active" href="#greece">Греция</a>
           </li>
-          <li class="countries__name-item">
-            <a href="#albania">Албания</a>
-          </li>
-          <!-- <li class="countries__name-item">Македония</li> -->
-          <!-- <li class="countries__name-item">Черногория</li>
-        <li class="countries__name-item">Хорватия</li> -->
+          <li class="countries__name-item countries__name-item--albania">Албания</li>
+          <li class="countries__name-item countries__name-item--macodenia">Македония</li>
+          <li class="countries__name-item countries__name-item--montenegro">Черногория</li>
+          <li class="countries__name-item countries__name-item--croatia">Хорватия</li>
         </ul>
       </div>
       <ul class="countries__description-list">
@@ -257,7 +244,7 @@
         </li>
       </ul>
     </article>
-    <section class="prices">
+    <section class="prices" id="prices">
       <div class="prices__description">
         <h2 class="prices__title">Цены</h2>
         <p class="prices__text">Специально для Вас мы разработали 2 пакета цен с разными условиями, отталкиваясь от Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%!</p>

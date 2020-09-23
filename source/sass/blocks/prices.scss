@@ -27,6 +27,10 @@
     padding-left: 21px;
     padding-right: 21px;
   }
+
+  @media (min-width: $desktop-first) and (max-width: $tablet-max-width) {
+    margin-top: -300px;
+  }
 }
 
 .prices__description {
@@ -104,6 +108,11 @@
 
   @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
     padding-bottom: 33px;
+  }
+
+  @media (min-width: $desktop-first) and (max-width: $tablet-max-width) {
+    margin: 0 auto;
+    max-width: 1200px;
   }
 }
 

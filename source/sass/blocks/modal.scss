@@ -10,6 +10,10 @@
     width: 100%;
     background-color: $color-gray;
   }
+
+  @media (min-width: $desktop-first) and (max-width: $tablet-max-width) {
+    width: 856px;
+  }
 }
 
 .modal__title {
@@ -49,6 +53,10 @@
 
   @media (max-width: $mobile-max-width) {
     display: block;
+  }
+
+  @media (min-width: $desktop-first) and (max-width: $tablet-max-width) {
+    justify-content: center;
   }
 }
 
@@ -116,9 +124,5 @@
 
   @media (max-width: $tablet-max-width) {
     width: 250px;
-  }
-
-  @media (max-width: $mobile-max-width) {
-    width: 100%;
   }
 }

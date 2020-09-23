@@ -8,8 +8,6 @@ body {
   font-weight: 400;
   color: $color-granite;
   background-color: $color-white;
-  overflow-x: hidden;
-  // overflow-y: hidden;
 }
 
 img {
@@ -29,5 +27,4 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  // outline: 1px solid red;
 }

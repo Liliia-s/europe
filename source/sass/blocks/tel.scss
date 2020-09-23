@@ -5,7 +5,6 @@
   left: -10px;
   width: 30px;
   height: 30px;
-  // margin-right: 8px;
   fill: none;
 
   &--header {
@@ -19,6 +18,10 @@
 
     @media (max-width: $tablet-max-width) {
       display: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: -54px;
     }
   }
 
@@ -40,7 +43,7 @@
   color: $color-coral;
   text-decoration: underline;
 
-  @media (max-width: $tablet-max-width) {
+  @media (max-width: $desktop-min-width) {
     padding-left: 0;
   }
 
@@ -51,17 +54,24 @@
   &--footer {
     padding-left: 33px;
   }
-}
 
-.tel__number--black {
-  // padding-left: 10px;
-  font-size: 20px;
-  color: $color-black;
-  text-decoration: none;
+  @media (min-width: $desktop-width) {
+    padding-left: 51px;
+  }
 
-  @media (max-width: $tablet-max-width) {
-    font-size: 18px;
-    color: $color-coral;
-    text-decoration: underline;
+  &--black {
+    font-size: 20px;
+    color: $color-black;
+    text-decoration: none;
+
+    @media (max-width: $tablet-max-width) {
+      font-size: 18px;
+      color: $color-coral;
+      text-decoration: underline;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 0;
+    }
   }
 }

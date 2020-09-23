@@ -24,6 +24,10 @@
     padding-bottom: 36px;
     margin-bottom: -30px;
   }
+
+  @media (min-width: $desktop-min-width) and (max-width: $tablet-max-width) {
+    width: 354px;
+  }
 }
 
 .reviews__title {

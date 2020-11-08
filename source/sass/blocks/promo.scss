@@ -87,7 +87,9 @@
   letter-spacing: -0.47px;
 
   @media (max-width: $mobile-max-width) {
+    padding-right: 16px;
     padding-bottom: 19px;
+    padding-left: 16px;
     max-width: 100%;
     color: $color-granite;
   }

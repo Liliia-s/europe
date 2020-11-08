@@ -27,6 +27,10 @@
   @media (min-width: $tablet-width) and (max-width: $desktop-min-width) {
     padding-bottom: 82px;
   }
+
+  &--indent {
+    padding-bottom: 0;
+  }
 }
 
 .site-header__logo {
@@ -42,13 +46,19 @@
 
 .site-header__button-menu {
   display: none;
+  width: 50px;
+  height: 50px;
+  border: none;
 
   @media (max-width: $desktop-min-width) {
-    // display: flex;
-    width: 50px;
-    height: 50px;
-    background-color: $color-coral;
-    border: 0;
+    &--open {
+      display: flex;
+      background: url("../img/icon-menu-open.svg") no-repeat $color-coral 50% 50%;
+    }
+
+    &--close {
+      background: url("../../img/icon-menu-close.svg") no-repeat transparent 50% 50%;
+    }
   }
 
   @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
@@ -69,6 +79,10 @@
 
   @media (min-width: $tablet-width) and (max-width: $desktop-min-width) {
     padding-bottom: 285px;
+  }
+
+  &--hide {
+    display: none;
   }
 }
 

@@ -1,25 +1,25 @@
 // ----INDEX-----------------------------------
 
-body {
-  @media (min-width: $desktop-width) and (max-width: $desktop-width) {
-    background: url("../img/desktop.jpg") no-repeat;
-    // background: url("../img/pixel-perfect-desktop-yellow.jpg") no-repeat;
-    min-height: 7760px;
-    opacity: 0.2;
-  }
+// body {
+//   @media (min-width: $desktop-width) and (max-width: $desktop-width) {
+//     background: url("../img/desktop.jpg") no-repeat;
+//     // background: url("../img/pixel-perfect-desktop-yellow.jpg") no-repeat;
+//     min-height: 7760px;
+//     opacity: 0.2;
+//   }
 
-  @media (min-width: $tablet-width) and (max-width: $tablet-width) {
-    background: url("../img/tablet.jpg") no-repeat;
-    // background: url("../img/pixel-perfect-tablet1.jpg") no-repeat;
-    // background: url("../img/pixel-perfect-tablet-yellow.jpg") no-repeat;
-    min-height: 4977px;
-    opacity: 0.2;
-  }
+//   @media (min-width: $tablet-width) and (max-width: $tablet-width) {
+//     background: url("../img/tablet.jpg") no-repeat;
+//     // background: url("../img/pixel-perfect-tablet1.jpg") no-repeat;
+//     // background: url("../img/pixel-perfect-tablet-yellow.jpg") no-repeat;
+//     min-height: 4977px;
+//     opacity: 0.2;
+//   }
 
-  @media (max-width: $mobile-width) {
-    background: url("../img/mobile.jpg") no-repeat;
-    // background: url("../img/pixel-perfect-mobile-menu.jpg") no-repeat;
-    min-height: 5212px;
-    opacity: 0.2;
-  }
-}
+//   @media (max-width: $mobile-width) {
+//     background: url("../img/mobile.jpg") no-repeat;
+//     // background: url("../img/pixel-perfect-mobile-menu.jpg") no-repeat;
+//     min-height: 5212px;
+//     opacity: 0.2;
+//   }
+// }

@@ -36,25 +36,19 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 90px;
-  padding-bottom: 12px;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: -0.42px;
-  color: rgba($color-granite, 0.3);
+  padding-bottom: 9px;
   border-bottom: 1px solid rgba($color-granite, 0.3);
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-min-width) {
+  @media (max-width: $desktop-min-width) {
+    flex-wrap: nowrap;
     margin-bottom: 40px;
+    margin-left: 17px;
+    overflow-y: scroll;
   }
 
   @media (max-width: $mobile-max-width) {
-    margin-bottom: 26px;
-  }
-
-  @media (max-width: $mobile-max-width) {
-    flex-wrap: wrap;
-    justify-content: center;
+    margin-bottom: 25px;
+    margin-left: 0;
   }
 
   @media (min-width: $desktop-min-width) and (max-width: $tablet-max-width) {
@@ -71,12 +65,7 @@
 
 .countries__name-item {
   &:not(:last-child) {
-    margin-right: 99px;
-
-    @media (max-width: $desktop-min-width) {
-      margin-right: 20px;
-      padding-bottom: 10px;
-    }
+    padding-right: 99px;
 
     @media (min-width: $tablet-width) {
       padding-bottom: 0;
@@ -84,13 +73,29 @@
   }
 }
 
+.countries__name-link {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.42px;
+  color: rgba($color-granite, 0.3);
+}
+
 .countries__description-item {
   position: relative;
-  display: none;
+  // display: none;
   // margin: 0 375px;
   flex-wrap: nowrap;
   justify-content: space-between;
   background-size: cover;
+
+  &--hide {
+    display: none;
+  }
+
+  &--show {
+    display: block;
+  }
 
   &::after {
     content: "";

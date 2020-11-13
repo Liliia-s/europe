@@ -9,7 +9,8 @@
 
   &:hover,
   &:active {
-    border: 3px solid $color-coral;
+    border-color: transparent;
+    box-shadow: 0 0 0 3px #fe7865;
   }
 
   &:hover .price-card__title,

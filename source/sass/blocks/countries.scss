@@ -79,6 +79,11 @@
   line-height: 24px;
   letter-spacing: -0.42px;
   color: rgba($color-granite, 0.3);
+
+  &--orange {
+    color: $color-coral;
+    // cursor: pointer;
+  }
 }
 
 .countries__description-item {
@@ -427,11 +432,6 @@
   @media (min-width: $desktop-first) and (max-width: $tablet-max-width) {
     margin: 0;
   }
-}
-
-.countries__name-item--active {
-  color: $color-coral;
-  cursor: pointer;
 }
 
 .countries__description-item--show {

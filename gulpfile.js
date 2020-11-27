@@ -82,8 +82,8 @@ gulp.task('htmlmin', function () {
 gulp.task('js', function () {
   return pipeline(
       gulp.src('source/js/*.js'),
-      // jsmerge('scripts.min.js'),
-      // jsmin(),
+      jsmerge('scripts.min.js'),
+      jsmin(),
       gulp.dest('build/js')
   );
 });
@@ -140,5 +140,5 @@ gulp.task('refresh', function (done) {
 });
 
 // gulp.task('build', gulp.series('clean', 'copy', 'css', 'sprite', 'js', 'htmlmin'));
-gulp.task('build', gulp.series('clean', 'copy', 'css', 'sprite', 'htmlmin'));
+gulp.task('build', gulp.series('clean', 'copy', 'css', 'sprite', 'htmlmin', 'js'));
 gulp.task('start', gulp.series('build', 'server'));

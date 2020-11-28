@@ -99,7 +99,7 @@
   }
 
   &--show {
-    display: block;
+    display: flex;
   }
 
   &::after {
@@ -432,8 +432,4 @@
   @media (min-width: $desktop-first) and (max-width: $tablet-max-width) {
     margin: 0;
   }
-}
-
-.countries__description-item--show {
-  display: flex;
 }

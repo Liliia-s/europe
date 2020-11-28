@@ -1,6 +1,7 @@
 'use strict';
 
 var countriesList = document.querySelector('.countries__name-list');
+var countriesName = countriesList.querySelectorAll('.countries__name-link');
 var countriesTabs = document.querySelectorAll('.countries__description-item');
 var countriesDescList = document.querySelector('.countries__description-list');
 var countriesCards = countriesDescList.querySelectorAll('.countries__description-item');
@@ -41,9 +42,17 @@ var showCountryCard = function (evt) {
       evt.target.classList.add('countries__name-link--orange');
     }
 
+    for (var j = 0; j < countriesName.length; j++) {
+      var countryName = countriesName[j].getAttribute('data-country');
+      if (countryName === data) {
+        countriesName[j].classList.add('countries__name-link--orange');
+        break;
+      }
+    }
+
     for (var i = 0; i < countriesCards.length; i++) {
-      var test = countriesCards[i].getAttribute('id');
-      if (test === data) {
+      var countryCard = countriesCards[i].getAttribute('id');
+      if (countryCard === data) {
         countriesCards[i].classList.add('countries__description-item--show');
         break;
       }

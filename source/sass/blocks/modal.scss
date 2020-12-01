@@ -1,3 +1,8 @@
+// .test {
+//   background: url("../img/modal.png") no-repeat;
+//   opacity: 0.2;
+// }
+
 .modal {
   padding: 48px;
   width: 656px;
@@ -14,6 +19,67 @@
   @media (min-width: $desktop-first) and (max-width: $tablet-max-width) {
     width: 856px;
   }
+
+  &--hide {
+    display: none;
+    padding-top: 20px;
+    padding-bottom: 185px;
+    background-color: white;
+  }
+
+  &--show {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1000;
+    display: block;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translate(-50%, -50%);
+    animation: show 0.5s ease-in;
+  }
+}
+
+@keyframes show {
+  0% {
+    transform: translate(-150%, -50%);
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translate(-50%, -50%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate(-50%, -50%)  translateX(-20px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate(-50%, -50%)  translateX(20px);
+  }
+}
+
+.modal__button-close {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 55px;
+  margin-left: auto;
+  padding: 0;
+  background: url("../img/icon-menu-close.svg") 50% 50% no-repeat;
+  border: none;
 }
 
 .modal__title {
@@ -27,6 +93,10 @@
 
   @media (max-width: $mobile-max-width) {
     padding-bottom: 20px;
+  }
+
+  &--popup {
+    padding-bottom: 56px;
   }
 }
 
@@ -113,16 +183,5 @@
 
   @media (max-width: $tablet-max-width) {
     width: 100%;
-  }
-}
-
-.modal__button-link {
-  margin: 0 auto;
-  padding: 18px 40px;
-  width: 176px;
-  border: none;
-
-  @media (max-width: $tablet-max-width) {
-    width: 250px;
   }
 }

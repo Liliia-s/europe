@@ -63,6 +63,25 @@
       }
     }
   }
+
+  &--modal {
+    margin: 0 auto;
+    padding: 18px 40px;
+    width: 176px;
+    border: none;
+
+    @media (max-width: $tablet-max-width) {
+      width: 250px;
+    }
+  }
+
+  &--popup {
+    width: 176px;
+
+    @media (max-width: $mobile-max-width) {
+      width: 100%;
+    }
+  }
 }
 
 .button__icon {

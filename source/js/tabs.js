@@ -6,6 +6,10 @@ var countriesTabs = document.querySelectorAll('.countries__description-item');
 var countriesDescList = document.querySelector('.countries__description-list');
 var countriesCards = countriesDescList.querySelectorAll('.countries__description-item');
 var placesList = document.querySelector('.places__list');
+var classShow = 'countries__description-item--show';
+var classOrange = 'countries__name-link--orange';
+var idCountry = 'data-country';
+var idCardCountry = 'id';
 
 var hideCoutries = function (tab) {
   tab.forEach(function (element) {
@@ -31,42 +35,35 @@ var hideActiveCard = function () {
   }
 };
 
-var showCountryCard = function (evt) {
-  if (evt.target.matches('.countries__name-link, .places__button')) {
-    var data = evt.target.getAttribute('data-country');
+var findCountry = function (countries, evt, className, idName) {
+  var data = evt.target.getAttribute('data-country');
 
-    hideActiveTab();
-    hideActiveCard();
-
-    if (evt.target.matches('.countries__name-link')) {
-      evt.target.classList.add('countries__name-link--orange');
-    }
-
-    for (var j = 0; j < countriesName.length; j++) {
-      var countryName = countriesName[j].getAttribute('data-country');
-      if (countryName === data) {
-        countriesName[j].classList.add('countries__name-link--orange');
-        break;
-      }
-    }
-
-    for (var i = 0; i < countriesCards.length; i++) {
-      var countryCard = countriesCards[i].getAttribute('id');
-      if (countryCard === data) {
-        countriesCards[i].classList.add('countries__description-item--show');
-        break;
-      }
+  for (var i = 0; i < countries.length; i++) {
+    var countryCard = countries[i].getAttribute(idName);
+    if (countryCard === data) {
+      countries[i].classList.add(className);
+      break;
     }
   }
 };
 
 var onCountryTabClick = function (evt) {
   evt.preventDefault();
-  showCountryCard(evt);
+  if (evt.target.matches('.countries__name-link')) {
+    hideActiveTab();
+    hideActiveCard();
+    evt.target.classList.add(classOrange);
+    findCountry(countriesCards, evt, classShow, idCardCountry);
+  }
 };
 
 var onCountryListClick = function (evt) {
-  showCountryCard(evt);
+  if (evt.target.matches('.places__button')) {
+    hideActiveTab();
+    hideActiveCard();
+    findCountry(countriesName, evt, classOrange, idCountry);
+    findCountry(countriesCards, evt, classShow, idCardCountry);
+  }
 };
 
 countriesList.addEventListener('click', onCountryTabClick);
